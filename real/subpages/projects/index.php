@@ -68,7 +68,23 @@
                 <h3 class="title" data-title="My works">Portfolio</h3>
             </div>
 
-            
+            <?php
+    
+            require_once "db.php";
+            $statement = $db->query("SELECT * FROM users");
+        
+            while ($row = $statement->fetch()) {
+                ?>
+            <p>
+                <?php echo $row['id']?>
+                <?php echo $row['name']?>
+                <?php echo $row['description']?>
+                <?php echo $row['link']?>
+            </p>
+
+            <?php
+            }
+            ?>
 
         </div>
     </main>
