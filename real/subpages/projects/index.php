@@ -69,21 +69,34 @@
             </div>
 
             <?php
-    
-            require_once "db.php";
-            $statement = $db->query("SELECT * FROM users");
-        
-            while ($row = $statement->fetch()) {
-                ?>
-            <p>
-                <?php echo $row['id']?>
-                <?php echo $row['name']?>
-                <?php echo $row['description']?>
-                <?php echo $row['link']?>
-            </p>
+                class MyDB extends SQLite3 {
+                    function __construct() 
+                    {
+                        $this->open('../../dbs/database.db');
+                    }
+                }
 
-            <?php
-            }
+                $sql =<<<EOF
+                    SELECT * from projects;
+                EOF;
+
+                $db = new MyDB();
+
+ 
+
+                $ret = $db->query($sql);
+                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
+                echo "<projects>";
+                echo "<div class='title'>{$row['title']}</div>";
+                echo "<img src='media/{$row['image']}'>";
+                echo "<div class='desc'>{$row['desc']}</div>";
+                echo "<div class='link'>{$row['link']}</div>";
+                echo "<projects>";
+                }
+                
+                // echo "Operation done successfully\n";
+                $db->close();
+            
             ?>
 
         </div>
