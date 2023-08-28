@@ -64,6 +64,20 @@ header {
     position: relative;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+  }
+
 nav {
     width: 100%;
     position: relative;
