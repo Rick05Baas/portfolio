@@ -67,37 +67,39 @@
             <div class="section-header">
                 <h3 class="title" data-title="My works">Portfolio</h3>
             </div>
-
-            <?php
-                class MyDB extends SQLite3 {
-                    function __construct() 
+            <div class="section-content">
+                <?php
+                class MyDB extends SQLite3
+                {
+                    function __construct()
                     {
                         $this->open('../../dbs/database.db');
                     }
                 }
 
-                $sql =<<<EOF
+                $sql = <<<EOF
                     SELECT * from projects;
                 EOF;
 
                 $db = new MyDB();
 
- 
+
+
 
                 $ret = $db->query($sql);
-                while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-                echo "<projects>";
-                echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
-                echo "<div class='title'>{$row['title']}</div>";
-                echo "<div class='desc'>{$row['desc']}</div>";
-                echo "<div class='link'>{$row['link']}</div>";
-                echo "<projects>";
+                while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                    echo "<projects>";
+                    echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
+                    echo "<div class='title'>{$row['title']}</div>";
+                    echo "<div class='desc'>{$row['desc']}</div>";
+                    echo "<a href='{$row['link']}' class='links'>Redirect</a>";
+                    echo "</projects>";
                 }
 
                 $db->close();
-            
-            ?>
 
+                ?>
+            </div>
         </div>
     </main>
 
