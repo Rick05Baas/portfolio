@@ -92,7 +92,7 @@
                     echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
                     echo "<div class='title'>{$row['title']}</div>";
                     echo "<div class='desc'>{$row['desc']}</div>";
-                    echo "<a href='{$row['link']}' class='links'>Redirect</a>";
+                    echo "<a href='{$row['link']}' class='links' target='_blank' >Redirect</a>";
                     echo "</projects>";
                 }
 
