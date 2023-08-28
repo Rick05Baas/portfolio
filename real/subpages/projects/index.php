@@ -63,7 +63,7 @@
 
 
 
-        <div class="container">
+        <div class="container1">
             <div class="section-header">
                 <h3 class="title" data-title="My works">Portfolio</h3>
             </div>
@@ -87,14 +87,13 @@
                 $ret = $db->query($sql);
                 while($row = $ret->fetchArray(SQLITE3_ASSOC) ) {
                 echo "<projects>";
+                echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
                 echo "<div class='title'>{$row['title']}</div>";
-                echo "<img src='media/{$row['image']}'>";
                 echo "<div class='desc'>{$row['desc']}</div>";
                 echo "<div class='link'>{$row['link']}</div>";
                 echo "<projects>";
                 }
-                
-                // echo "Operation done successfully\n";
+
                 $db->close();
             
             ?>
