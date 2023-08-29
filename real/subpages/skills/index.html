@@ -20,7 +20,7 @@
             <nav>
                 <div class="container">
                     <div class="logo">
-                        <img class="ogol" src="../../img/logo/logo.png" alt="">
+                        <a href="../../"><img class="ogol" src="../../img/logo/logo.png" alt=""></a>
                     </div>
 
                     <div class="links">

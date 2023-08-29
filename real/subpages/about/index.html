@@ -20,7 +20,7 @@
             <nav>
                 <div class="container">
                     <div class="logo">
-                        <img class="ogol" src="../../img/logo/logo.png" alt="">
+                        <a href="../../"><img class="ogol" src="../../img/logo/logo.png" alt=""></a>
                     </div>
 
                     <div class="links">
@@ -51,20 +51,62 @@
                     <div class="column-1">
                         <h1 class="header-title">About me</h1>
                         <p class="text">
-                            I am an 18 year old developer from the Netherlands. I've been developing for about 2 to
-                            3
-                            years with different languages. I go to school in Rotterdam and follow the software
-                            development course at the graphic lyceum Rotterdam.
+                            I am an <span id="ageParagraph"></span> year old developer from the Netherlands. I've been developing for
+                            about 2 to 3 years with different languages. I go to school in Rotterdam and follow the software
+                            development course at the graphic lyceum Rotterdam. <br><br> I love riding motorcycles and
+                            will be riding a motorcycle myself when I'm 20. I currently drive a car and moped. I have a Beta RR
+                            50 moped for the real motorcycle feeling. I am always very enthusiastic and I learn quickly.
+                            As I said on the homepage, I live close to Rotterdam. In my free time I like to code, go out
+                            with friends, learn new things, ride my moped, drive my car, go to the gym and play ice
+                            hockey.
                         </p>
                     </div>
 
                     <div class="column-2">
-
+                        <img class="img-person1" src="../../img/person/ik.JPG" alt="">
                     </div>
                 </div>
             </div>
 
         </header>
+
+        <script>
+            function calculateAge(birthDate) {
+                const currentDate = new Date();
+                const birthYear = birthDate.getFullYear();
+                const birthMonth = birthDate.getMonth();
+                const birthDay = birthDate.getDate();
+                let age = currentDate.getFullYear() - birthYear;
+                if (
+                    currentDate.getMonth() < birthMonth ||
+                    (currentDate.getMonth() === birthMonth && currentDate.getDate() < birthDay)
+                ) {
+                    age--;
+                }
+                return age;
+            }
+            function updateAgeRealTime() {
+                const birthDate = new Date("2005-12-19");
+                const age = calculateAge(birthDate);
+                const ageParagraph = document.getElementById("ageParagraph");
+
+                if (age === 1) {
+                    ageParagraph.textContent = `Error`;
+                } else {
+                    ageParagraph.textContent = age;
+                }
+            }
+
+            // Voer de leeftijdsupdate in real time uit
+            updateAgeRealTime();
+
+            // Initial update
+            updateAge();
+
+            // Update the age every day (adjust the interval as needed)
+            setInterval(updateAge, 86400000); // 24 hours in milliseconds
+
+        </script>
 
 
     </main>

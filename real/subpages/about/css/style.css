@@ -1,9 +1,15 @@
 body {
     margin: 0;
     /* overflow: hidden; */
-  }
-  canvas {
+}
+
+canvas {
     position: absolute;
     top: 0;
     left: 0;
-  }
+}
+
+.img-person1 {
+    width: 65%;
+    border-radius: 100%;
+}
