@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+  canvas {
+    display: block;
+  }
+</style>
+<title>Falling Stars</title>
+</head>
+<body>
+<canvas id="nightSky"></canvas>
+<script>
+  const canvas = document.getElementById('nightSky');
+  const context = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const stars = [];
+  const numStars = 100;
+
+  for (let i = 0; i < numStars; i++) {
+    const x = Math.random() * canvas.width;
+    const y = Math.random() * canvas.height;
+    const radius = Math.random() * 2;
+    stars.push({ x, y, radius });
+  }
+
+  function draw() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let star of stars) {
+      context.beginPath();
+      context.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      context.fillStyle = 'white';
+      context.fill();
+    }
+  }
+
+  function update() {
+    for (let star of stars) {
+      star.y += 1; // Adjust the falling speed here
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    }
+  }
+
+  function animate() {
+    draw();
+    update();
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+</body>
+</html>
