@@ -7,7 +7,7 @@ document.querySelector("a").addEventListener("click", function(){activateLoadAni
 function activateLoadAnim(undo){ document.querySelector("#loading").classList.remove("animate");
   document.querySelector("button").blur();
   document.querySelector("#loading").classList.add("animate"); document.querySelector("#toast").classList.remove("popped");
-  setTimeout(stopAnim, 5000);
+  setTimeout(stopAnim, 1000);
   if(undo){
     document.querySelector("#toast .big").textContent = 'Alright.';
     document.querySelector("#toast .info").textContent = 'We undid that thing.';
@@ -23,7 +23,7 @@ function activateLoadAnim(undo){ document.querySelector("#loading").classList.re
 function stopAnim(){
   document.querySelector("#loading").classList.remove("animate");
   document.querySelector("#toast").classList.add("popped");
-  setTimeout(cleanup, 6000);
+  setTimeout(cleanup, 1);
 }
 
 function cleanup(){
