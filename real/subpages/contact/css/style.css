@@ -1,6 +1,6 @@
 .column-2 {
-    padding: 25px 30px;
-    width: 600px;
+    padding: 50px 30px;
+    width: auto;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -8,15 +8,59 @@
 
 form {
     border-radius: 10%;
+    min-width: 80%;
 }
 
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
 * {
     margin: 0px;
     padding: 0px;
 }
 
+.active {
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    border: white;
+    font-size: 1rem;
+    padding: 0.9rem 2.1rem;
 
+    display: inline-block;
+    padding: 0.9rem 1.2rem;
+    color: var(--dark-one);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    transition: 0.3s;
+    color: white;
+}
+
+.active:hover {
+    color: var(--light-one);
+    background-color: #00cdd8;
+}
 
 .context {
     width: 100%;
@@ -37,8 +81,6 @@ form {
     background: -webkit-linear-gradient(to left, #00ADB5, #00979f);
     width: 100%;
     height: 100vh;
-
-
 }
 
 .circles {
@@ -74,7 +116,7 @@ form {
     left: 10%;
     width: 20px;
     height: 20px;
-    animation-delay: 2s;
+    animation-delay: .5s;
     animation-duration: 12s;
 }
 
