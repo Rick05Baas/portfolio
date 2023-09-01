@@ -50,7 +50,7 @@ projects{
     /* border: 1px solid black; */
     border-radius: 2%;
 
-    padding: 50px 30px;
+    padding: 40px 30px;
     width: 300px;
     background: #fff;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
@@ -58,18 +58,6 @@ projects{
 
     cursor: pointer;
 
-}
-
-.container1 {
-    display: flex;
-    flex-wrap: wrap; /* Ensure the projects wrap to the next line when there are more than four */
-    justify-content: space-between; /* Distribute projects evenly */
-}
-
-projects {
-    flex: 0 0 calc(25% - 2rem); /* Each project takes 25% width with a little spacing */
-    margin: 1rem; /* Add spacing around each project */
-    /* Your existing styles for projects go here */
 }
 
 projects a {

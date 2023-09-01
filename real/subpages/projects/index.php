@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../img/logo/logo.png">
     <link rel="stylesheet" href="../../css/stylesheet.css">
-    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="../../css/responsive.css">
 
 
@@ -54,7 +54,7 @@
                     <div class="column-1">
                         <h1 class="header-title">Projects</h1>
                         <p class="text">
-                            Al mijn projecten vind u hieronder!
+                            You can find all my projects down below!
                         </p>
                     </div>
 
