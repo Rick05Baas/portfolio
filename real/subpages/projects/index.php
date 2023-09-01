@@ -44,6 +44,9 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
             </nav>
 
             <div class="header-content">
@@ -94,7 +97,7 @@
                     echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
                     echo "<div class='title'>{$row['title']}</div>";
                     echo "<div class='desc'>{$row['desc']}</div>";
-                    echo "<a href='{$row['link']}' class='links' target='_blank' >Redirect</a>";
+                    echo "<a href='{$row['link']}' class='links1' target='_blank' >Redirect</a>";
                     echo "</projects>";
                 }
 
@@ -191,10 +194,7 @@
             </div>
         </div>
     </footer>
-
-</body>
-
-</html>
+    <script src="../../js/app.js"></script>
 
 </body>
 

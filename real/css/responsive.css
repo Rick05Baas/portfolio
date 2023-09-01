@@ -2,6 +2,12 @@
     .text {
       font-size: 1rem;
     }
+    body {
+        overflow-x: none;
+
+    }
+
+    
   
     .title {
       font-size: 2.1rem;
@@ -417,6 +423,18 @@
     .grid-2 {
       grid-template-columns: 1fr !important;
     }
+
+    .links1 {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        color: #222831;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 10%;
+    }
   
     .column-1 {
       margin-right: 0;
@@ -704,6 +722,41 @@
     .container {
       padding: 0 2rem;
     }
+
+    .skill-bars {
+        width: 80%;
+    }
+
+    /* projects {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    } */
+
+    .links1 {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        color: #222831;
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 10%;
+        margin-right: 100%;
+    }
+
+    .project-img {
+        width: 30vw;
+        height: auto;
+        border-radius: 3%;
+    }
+
+    .img-person {
+        width: 70vw;
+        height: auto;
+    }
   
     .title {
       font-size: 1.8rem;
@@ -733,6 +786,24 @@
     .records .half-circle {
       top: 50%;
       left: 50px;
+    }
+
+    /* .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    } */
+
+    .section-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    projects a {
+        display: block;
     }
   
     .records .wave2 {

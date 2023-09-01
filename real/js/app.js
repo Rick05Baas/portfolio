@@ -6,21 +6,50 @@ const links = document.querySelectorAll(".links a");
 
 
 
-footer_input.addEventListener("focus", () => {
-  footer_input.classList.add("focus");
-});
+// footer_input.addEventListener("focus", () => {
+//   footer_input.classList.add("focus");
+// });
 
-footer_input.addEventListener("blur", () => {
-  if (footer_input.value != "") return;
-  footer_input.classList.remove("focus");
-});
+// footer_input.addEventListener("blur", () => {
+//   if (footer_input.value != "") return;
+//   footer_input.classList.remove("focus");
+// });
 
+
+// ----------------------------------------------------------------------
+
+
+function myFunction() {
+  window.alert("hallo wereld");
+}
+
+
+// const element = document.getElementById("myBtn");
+// element.addEventListener("click", function() {
+//   document.getElementById("demo").innerHTML = "Hello World";
+// });
 
 
 function closeMenu() {
   navbar.classList.remove("open");
   document.body.classList.remove("stop-scrolling");
 }
+
+
+hamburger_menu.addEventListener('click', () => {
+  // window.alert('gelukt!');
+
+  if (!navbar.classList.contains("open")) {
+        navbar.classList.add("open");
+        document.body.classList.add("stop-scrolling");
+      } else {
+        closeMenu();
+      }
+});
+
+// function myfunction() {
+//   window.alert('gelukt!');
+// }
 
 // hamburger_menu.addEventListener("click", () => {
 //   if (!navbar.classList.contains("open")) {
@@ -32,11 +61,6 @@ function closeMenu() {
 // });
 
 
-hamburger_menu.addEventListener('click', myFunction);
-
-function myfunction() {
-  window.alert('gelukt!');
-}
 
 // if (!navbar.classList.contains("open")) {
 //   navbar.classList.add("open");
@@ -48,69 +72,72 @@ function myfunction() {
 
 links.forEach((link) => link.addEventListener("click", () => closeMenu()));
 
-filter_btns.forEach((btn) =>
-  btn.addEventListener("click", () => {
-    filter_btns.forEach((button) => button.classList.remove("active"));
-    btn.classList.add("active");
+// ----------------------------------------------------------------------
 
-    let filterValue = btn.dataset.filter;
 
-    $(".grid").isotope({ filter: filterValue });
-  })
-);
+// filter_btns.forEach((btn) =>
+//   btn.addEventListener("click", () => {
+//     filter_btns.forEach((button) => button.classList.remove("active"));
+//     btn.classList.add("active");
 
-$(".grid").isotope({
-  itemSelector: ".grid-item",
-  layoutMode: "fitRows",
-  transitionDuration: "0.6s",
-});
+//     let filterValue = btn.dataset.filter;
 
-window.addEventListener("scroll", () => {
-  skillsEffect();
-  countUp();
-});
+//     $(".grid").isotope({ filter: filterValue });
+//   })
+// );
 
-function checkScroll(el) {
-  let rect = el.getBoundingClientRect();
-  if (window.innerHeight >= rect.top + el.offsetHeight) return true;
-  return false;
-}
+// $(".grid").isotope({
+//   itemSelector: ".grid-item",
+//   layoutMode: "fitRows",
+//   transitionDuration: "0.6s",
+// });
 
-function skillsEffect() {
-  if (!checkScroll(skills_wrap)) return;
-  skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
-}
+// window.addEventListener("scroll", () => {
+//   skillsEffect();
+//   countUp();
+// });
 
-function countUp() {
-  if (!checkScroll(records_wrap)) return;
-  records_numbers.forEach((numb) => {
-    const updateCount = () => {
-      let currentNum = +numb.innerText;
-      let maxNum = +numb.dataset.num;
-      let speed = 100;
-      const increment = Math.ceil(maxNum / speed);
+// function checkScroll(el) {
+//   let rect = el.getBoundingClientRect();
+//   if (window.innerHeight >= rect.top + el.offsetHeight) return true;
+//   return false;
+// }
 
-      if (currentNum < maxNum) {
-        numb.innerText = currentNum + increment;
-        setTimeout(updateCount, 1);
-      } else {
-        numb.innerText = maxNum;
-      }
-    };
+// function skillsEffect() {
+//   if (!checkScroll(skills_wrap)) return;
+//   skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
+// }
 
-    setTimeout(updateCount, 400);
-  });
-}
+// function countUp() {
+//   if (!checkScroll(records_wrap)) return;
+//   records_numbers.forEach((numb) => {
+//     const updateCount = () => {
+//       let currentNum = +numb.innerText;
+//       let maxNum = +numb.dataset.num;
+//       let speed = 100;
+//       const increment = Math.ceil(maxNum / speed);
 
-var mySwiper = new Swiper(".swiper-container", {
-  speed: 1100,
-  slidesPerView: 1,
-  loop: true,
-  autoplay: {
-    delay: 5000,
-  },
-  navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
-  },
-});
+//       if (currentNum < maxNum) {
+//         numb.innerText = currentNum + increment;
+//         setTimeout(updateCount, 1);
+//       } else {
+//         numb.innerText = maxNum;
+//       }
+//     };
+
+//     setTimeout(updateCount, 400);
+//   });
+// }
+
+// var mySwiper = new Swiper(".swiper-container", {
+//   speed: 1100,
+//   slidesPerView: 1,
+//   loop: true,
+//   autoplay: {
+//     delay: 5000,
+//   },
+//   navigation: {
+//     prevEl: ".swiper-button-prev",
+//     nextEl: ".swiper-button-next",
+//   },
+// });
