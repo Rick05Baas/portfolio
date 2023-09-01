@@ -53,6 +53,11 @@ img {
     margin: 0 auto;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -161,7 +166,7 @@ nav .container {
     font-size: 1rem;
 }
 
-.bar:before,
+/* .bar:before,
 .bar:after {
     content: "";
     position: absolute;
@@ -197,7 +202,7 @@ nav.open .hamburger-menu .bar:after {
 
 nav.open .links {
     transform: translateX(0);
-}
+} */
 
 .header-content .container.grid-2 {
     grid-template-columns: 2.5fr 3.5fr;
@@ -255,6 +260,8 @@ nav.open .links {
 .img-person {
     width: 65%;
     border-radius: 100%;
+    border: 3px var(--main-color) solid;
+    background-color: var(--dark-one);
     /* margin-left: auto; */
 }
 
@@ -870,24 +877,25 @@ nav.open .links {
 .hamburger-menu {
     width: 2.7rem;
     height: 3rem;
-    z-index: 100;
+    z-index: 1000;
     position: relative;
     display: none;
     align-items: center;
     justify-content: flex-end;
-}
-
-.hamburger-menu .bar {
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
     position: relative;
     width: 2.1rem;
     height: 3px;
     border-radius: 3px;
     background-color: var(--dark-one);
     transition: 0.5s;
-}
-
-.bar:before,
-.bar:after {
+  }
+  
+  .bar:before,
+  .bar:after {
     content: "";
     position: absolute;
     width: 2.1rem;
@@ -895,31 +903,31 @@ nav.open .links {
     border-radius: 3px;
     background-color: var(--dark-one);
     transition: 0.5s;
-}
-
-.bar:before {
+  }
+  
+  .bar:before {
     transform: translateY(-9px);
-}
-
-.bar:after {
+  }
+  
+  .bar:after {
     transform: translateY(9px);
-}
-
-nav.open .hamburger-menu .bar {
+  }
+  
+  nav.open .hamburger-menu .bar {
     background-color: transparent;
     transform: rotate(360deg);
-}
-
-nav.open .hamburger-menu .bar:before {
+  }
+  
+  nav.open .hamburger-menu .bar:before {
     transform: translateY(0) rotate(45deg);
     background-color: var(--light-one);
-}
-
-nav.open .hamburger-menu .bar:after {
+  }
+  
+  nav.open .hamburger-menu .bar:after {
     transform: translateY(0) rotate(-45deg);
     background-color: var(--light-one);
-}
-
-nav.open .links {
+  }
+  
+  nav.open .links {
     transform: translateX(0);
-}
+  }
