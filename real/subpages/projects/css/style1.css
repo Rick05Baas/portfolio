@@ -8,8 +8,9 @@
 }
 
 .title {
- color: #00ADB5;
+    color: #00ADB5;
 }
+
 .project-img {
     width: 10vw;
     height: auto;
@@ -17,59 +18,28 @@
 }
 
 .container1 {
-    display: flex;
-    flex-direction: column;
-
-    position: relative;
-    z-index: 5;
     max-width: 92rem;
     padding: 0 4rem;
     margin: 0 auto;
     margin-bottom: 5rem;
     margin-top: 4rem;
-}
-
-.section-content {
-    display: flex;
-    justify-self: center;
-    align-items: center;
-}
-
-projects{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 25%;
-    max-height: 30rem;
-    min-height: 30rem;
-    text-align: center;
-
-    margin: 1rem 1rem 1rem 1rem;
-
-    /* border: 1px solid black; */
-    border-radius: 2%;
-
-    padding: 50px 30px;
-    width: 300px;
-    background: #fff;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-    border-radius: 10px;
-
-    cursor: pointer;
-
-}
-
-.container1 {
-    display: flex;
-    flex-wrap: wrap; /* Ensure the projects wrap to the next line when there are more than four */
-    justify-content: space-between; /* Distribute projects evenly */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Create four columns */
+    gap: 1rem; /* Add spacing between projects */
 }
 
 projects {
-    flex: 0 0 calc(25% - 2rem); /* Each project takes 25% width with a little spacing */
-    margin: 1rem; /* Add spacing around each project */
-    /* Your existing styles for projects go here */
+    display: flex;
+    flex-direction: column;
+    max-height: 30rem;
+    min-height: 30rem;
+    text-align: center;
+    border-radius: 2%;
+    padding: 50px 30px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 projects a {
@@ -101,9 +71,7 @@ projects a.active:hover {
     background-color: #00cdd8;
 }
 
-
-
-projects:hover{
+projects:hover {
     transform: scale(1.05);
-    transition: .5s;
+    transition: 0.5s;
 }

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="../../img/logo/logo.png">
     <link rel="stylesheet" href="../../css/stylesheet.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style1.css">
     <link rel="stylesheet" href="../../css/responsive.css">
 
 
