@@ -69,9 +69,6 @@
 
 
         <div class="container1">
-            <div class="section-header">
-                <h3 class="title" data-title="My works">Portfolio</h3>
-            </div>
             <div class="section-content">
                 <?php
                 class MyDB extends SQLite3
