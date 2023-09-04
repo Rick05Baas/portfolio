@@ -51,11 +51,11 @@
                     </div>
             </nav>
 
-            <div class="header-content">
+            <div class="header-content1">
             <canvas></canvas>
-                <div class="container grid-2">
+                <div class="container grid-21">
                     <div class="column-1">
-                        <h1 class="header-title">Projects</h1>
+                        <h1 class="header-title">Projects</h1><br>
                         <p class="text">
                             You can find all my projects down below!
                         </p>

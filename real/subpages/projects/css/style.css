@@ -109,3 +109,27 @@ projects:hover{
     transform: scale(1.05);
     transition: .5s;
 }
+
+
+.header-content1 .container.grid-21 {
+    grid-template-columns: 2.5fr 3.5fr;
+    min-height: calc(35vh - 6rem);
+    padding-bottom: 2.5rem;
+    text-align: left;
+}
+
+.container {
+    position: relative;
+    z-index: 5;
+    max-width: 92rem;
+    padding: 0 4rem;
+    margin: 0 auto;
+}
+
+
+.header-content1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;    
+    margin-top: 7rem;
+}
