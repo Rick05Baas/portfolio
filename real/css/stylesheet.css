@@ -63,6 +63,7 @@ img {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
+    z-index: 4;
 }
 
 /* Header */
@@ -894,6 +895,7 @@ nav.open .links {
     z-index: 1000;
     position: relative;
     display: none;
+    /* z-index: 1000; */
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;

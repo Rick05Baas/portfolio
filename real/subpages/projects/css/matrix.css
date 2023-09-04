@@ -1,0 +1,10 @@
+* {margin: 0; padding: 0}
+/* body {background: white;} */
+canvas {
+    /* display: block; */
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

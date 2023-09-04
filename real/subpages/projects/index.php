@@ -10,6 +10,7 @@
     <link rel="icon" href="../../img/logo/logo.png">
     <link rel="stylesheet" href="../../css/stylesheet.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/matrix.css">
     <link rel="stylesheet" href="../../css/responsive.css">
 
 
@@ -20,6 +21,7 @@
     <main>
         <header>
             <nav>
+                
                 <div class="container">
                     <div class="logo">
                         <a href="../../"><img class="ogol" src="../../img/logo/logo.png" alt=""></a>
@@ -50,6 +52,7 @@
             </nav>
 
             <div class="header-content">
+            <canvas></canvas>
                 <div class="container grid-2">
                     <div class="column-1">
                         <h1 class="header-title">Projects</h1>
@@ -64,6 +67,9 @@
                 </div>
             </div>
 
+            
+
+            <script src="./js/matrix.js"></script>
         </header>
 
 
@@ -94,6 +100,7 @@
                     echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
                     echo "<div class='title'>{$row['title']}</div>";
                     echo "<div class='desc'>{$row['desc']}</div>";
+                    echo "<div class='date'>{$row['date']}</div>";
                     echo "<a href='{$row['link']}' class='links1' target='_blank' >Redirect</a>";
                     echo "</projects>";
                 }
