@@ -22,7 +22,7 @@ for (var i = 0; i < columns; i++) {
 
 // Setting up the draw function
 function draw() {
-  ctx.fillStyle = 'rgba(255, 255, 255, .1)';
+  ctx.fillStyle = 'rgba(238, 238, 238, .1)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];

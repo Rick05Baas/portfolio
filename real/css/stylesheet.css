@@ -4,7 +4,7 @@
     --dark-one: #222831;
     --dark-two: #393E46;
     --main-color: #00ADB5;
-    --light-one: #EEEEEE;
+    --light-one: rgb(238, 238, 238);
     --light-two: #f9f9f9;
     --light-three: #ffffff;
 }

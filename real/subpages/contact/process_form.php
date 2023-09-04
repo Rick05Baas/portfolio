@@ -17,5 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "An error occurred. Please try again later.";
     }
+
+    header('Location: ../contact/thanks/');
 }
 ?>
