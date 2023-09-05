@@ -10,10 +10,6 @@ const links = document.querySelectorAll(".links a");
 // ----------------------------------------------------------------------
 
 
-function myFunction() {
-  window.alert("hallo wereld");
-}
-
 
 
 function closeMenu() {
