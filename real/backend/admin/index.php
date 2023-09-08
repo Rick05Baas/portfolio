@@ -77,7 +77,6 @@
                             <p class="text">
                                 
                             </p>
-                            <!-- <a href="./subpages/about/" class="btn">Learn more about me!</a> -->
                         </div>
 
                         <div class="column-2 image">
@@ -102,6 +101,47 @@
                             </form>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            
+
+            <div class="container1">
+                <div class="section-content">
+                    <h1>Project Overview</h1><br><br><br>
+                    <?php
+                class MyDB extends SQLite3
+                {
+                    function __construct()
+                    {
+                        $this->open('../../dbs/database.db');
+                    }
+                }
+
+                $sql = <<<EOF
+                    SELECT * from projects;
+                EOF;
+
+                $db = new MyDB();
+
+
+
+
+                $ret = $db->query($sql);
+                while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
+                    echo "<projects>";
+                    echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
+                    echo "<div class='title'>{$row['title']}</div>";
+                    echo "<a href='{$row['link']}' class='links1' target='_blank' >Redirect</a>";
+                    echo '<button><a href="delete.php?title=' . urlencode($row['title']) . '">Delete</a></button>';
+                    echo "</projects>";
+                }
+
+                $db->close();
+
+                // while($data = $result->fetchArray(SQLITE3_ASSOC))  
+
+                ?>
                 </div>
             </div>
 
