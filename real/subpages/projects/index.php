@@ -76,6 +76,8 @@
 
         <div class="container1">
             <div class="section-content">
+
+            <!-- reaching database -->
                 <?php
                 class MyDB extends SQLite3
                 {
@@ -85,6 +87,7 @@
                     }
                 }
 
+                // selecting files
                 $sql = <<<EOF
                     SELECT * from projects;
                 EOF;
@@ -93,7 +96,7 @@
 
 
 
-
+                // echoing table
                 $ret = $db->query($sql);
                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                     echo "<projects>";
