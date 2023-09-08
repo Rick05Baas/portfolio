@@ -24,7 +24,7 @@
                 $ret = $db->query("INSERT INTO `projects` (`title`, `image`, `desc`, `link`, `date`) VALUES ('$title','$image','$desc','$link','$date')");
 
                 if (!headers_sent()) {
-                    header("Location: https://88679.stu.sd-lab.nl/portfolio/backed/admin/");
+                    header("Location: ../../");
                     exit;
                 }
 
