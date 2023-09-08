@@ -24,7 +24,7 @@
                 $ret = $db->query("INSERT INTO `projects` (`title`, `image`, `desc`, `link`, `date`) VALUES ('$title','$image','$desc','$link','$date')");
 
                 if (!headers_sent()) {
-                    header("Location: ../../");
+                    header("Location: ../admin/");
                     exit;
                 }
 

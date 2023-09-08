@@ -133,7 +133,7 @@
                     echo "<img class='project-img' src='../../img/projecten/{$row['image']}'>";
                     echo "<div class='title'>{$row['title']}</div>";
                     echo "<a href='{$row['link']}' class='links1' target='_blank' >Redirect</a>";
-                    echo '<button><a href="delete.php?title=' . urlencode($row['title']) . '">Delete</a></button>';
+                    echo '<button><a href="../admin/delete/delete.php?title=' . urlencode($row['title']) . '">Delete</a></button>';
                     echo "</projects>";
                 }
 
