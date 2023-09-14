@@ -13,3 +13,21 @@ canvas {
     width: 65%;
     border-radius: 100%;
 }
+
+
+.active {
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.9rem 2.1rem;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+
+
+.active:hover {
+    color: var(--light-one);
+    background-color: #00cdd8;
+    transition: 0.3s;
+}

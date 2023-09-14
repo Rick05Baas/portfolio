@@ -21,7 +21,7 @@
     <main>
         <header>
             <nav>
-                
+
                 <div class="container">
                     <div class="logo">
                         <a href="../../"><img class="ogol" src="../../img/logo/logo.png" alt=""></a>
@@ -52,7 +52,7 @@
             </nav>
 
             <div class="header-content1">
-            <canvas></canvas>
+                <canvas></canvas>
                 <div class="container grid-21">
                     <div class="column-1">
                         <h1 class="header-title">Projects</h1><br>
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            
+
 
             <script src="./js/matrix.js"></script>
         </header>
@@ -76,6 +76,8 @@
 
         <div class="container1">
             <div class="section-content">
+
+                <!-- reaching database -->
                 <?php
                 class MyDB extends SQLite3
                 {
@@ -85,6 +87,7 @@
                     }
                 }
 
+                // selecting files
                 $sql = <<<EOF
                     SELECT * from projects;
                 EOF;
@@ -93,7 +96,7 @@
 
 
 
-
+                // echoing table
                 $ret = $db->query($sql);
                 while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
                     echo "<projects>";
@@ -108,6 +111,21 @@
                 $db->close();
 
                 ?>
+
+                <script>
+                    // Voeg JavaScript toe om de link te activeren wanneer er op de projectdiv wordt geklikt
+                    const projectDivs = document.querySelectorAll('projects');
+
+                    projectDivs.forEach((div) => {
+                        div.addEventListener('click', function () {
+                            const link = div.querySelector('.links1');
+                            if (link) {
+                                window.location.href = link.href;
+                            }
+                        });
+                    });
+                </script>
+
             </div>
         </div>
     </main>
