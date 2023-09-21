@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = "New Contact Form Submission from $name";
 
     $email_body = "Name: \n$name\n";
-    $email_body .= "Email: \n$email\n";
-    $email_body .= "Message:\n$message";
+    $email_body = "Email: \n$email\n";
+    $email_body = "Message:\n$message";
 
     if (mail($to, $subject, $email_body)) {
         echo "Thank you for your submission!";
